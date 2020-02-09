@@ -594,6 +594,10 @@ label {
     .product:hover & {
       z-index: 1;
       transition: background-color 0.3s;
+
+      @media (--sm) {
+        transition: none;
+      }
     }
 
     .products-wrapper_extensions & {
@@ -603,6 +607,10 @@ label {
     .product__link:hover + & {
       z-index: 1;
       background-color: var(--wt-color-white-60);
+
+      @media (--sm) {
+        background-color: transparent;
+      }
     }
   }
 
