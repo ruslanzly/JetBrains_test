@@ -1518,9 +1518,19 @@ label {
 
   a {
     color: var(--wt-color-white-60);
+    transition: transform 0.2s;
+
+    @media (--sm) {
+      transition: none;
+    }
 
     &:hover {
       color: var(--wt-color-white);
+      transform: scale(1.2);
+
+      @media (--sm) {
+        transform: none;
+      }
     }
   }
 
