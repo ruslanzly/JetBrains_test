@@ -1698,7 +1698,10 @@ label {
   &__icon {
     margin-right: 24px;
     position: relative;
-    transition: transform 0.2s;
+
+    @media (--sm) {
+      position: static;
+    }
 
     &::before,
     &::after {
@@ -1712,6 +1715,11 @@ label {
       opacity: 0;
       transition: background-color 0.2s, opacity 0.2s, z-index 0.2s, top 0.2s, bottom 0.2s;
       z-index: -1;
+
+      @media (--sm) {
+        display: none;
+        transition: none;
+      }
     }
 
     &::before {
@@ -1736,10 +1744,6 @@ label {
 
       &::after {
         bottom: -6px;
-      }
-
-      @media (--sm) {
-        transform: none;
       }
     }
 
