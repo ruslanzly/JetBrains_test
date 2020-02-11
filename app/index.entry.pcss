@@ -539,8 +539,13 @@ label {
   }
 
   &__title {
-    margin-bottom: 24px;
     display: block;
+    margin-top: 40px;
+    margin-bottom: 24px;
+
+    @media (--lg) {
+      margin-top: 0;
+    }
 
     @media (--sm) {
       display: none;
