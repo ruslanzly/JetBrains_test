@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       function handler(e) {
         let target = e.target;
 
-        if (target.classList.contains("product__link")) {
+        if (target.tagName === "A" && target.classList.contains("product__link")) {
           let productImageClassList = productsImages.querySelector("[data-id=" + target.id + "]").classList;
           let productImagesClassList = productsImages.classList;
 
